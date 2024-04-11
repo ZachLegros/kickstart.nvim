@@ -206,6 +206,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- [[ Center cursor on page up/down ]]
+local n_keymap = function(lhs, rhs)
+  vim.api.nvim_set_keymap('n', lhs, rhs, { noremap = true, silent = true })
+end
+
+n_keymap('<C-u>', '<C-u>zz')
+n_keymap('<C-d>', '<C-d>zz')
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
