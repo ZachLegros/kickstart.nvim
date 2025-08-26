@@ -19,6 +19,9 @@ return {
           hide_gitignored = false,
         },
       },
+      window = {
+        auto_expand_width = false,
+      },
     }
   end,
 }
